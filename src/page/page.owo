@@ -1,0 +1,332 @@
+<template lang="pug">
+.home
+  plug(_name="module98" _src="https://template.owo.ink/d998fae6830db2ac.owo")
+  img.main(src="@|bg.jpg|")
+  
+  .main-box
+    plug(_name="module39" _src="https://template.owo.ink/5901031d12b7c5e1.owo")
+    .lr-box.w1200.mt40.clear
+      .fl
+        plug(_name="module12" _src="https://template.owo.ink/19ff9386bffbebac.owo")
+      .fr
+        h2 国务院总理李克强答记者问答记者问答记
+        p 如何准确理解把握习总书记重要讲话的精神内涵？如何使主题教育活动落实更有实效？中央党史和文献研究院研究员黄一兵对习近平重要讲话内容进行的解读。
+        .line
+        h2 国务院总理李克强答记者问答记者问答记
+        p 如何准确理解把握习总书记重要讲话的精神内涵？如何使主题教育活动落实更有实效？中央党史和文献研究院研究员黄一兵对习近平重要讲话内容进行的解读。
+        .line
+        ul
+          li
+            a(href="#") 总理记者会十句妙答|4年两会看总理政务改革进行时
+          li
+            a(href="#") 人民网评：记者会，李克强总理使了三招“降龙十八掌”
+          li
+            a(href="#") 总理记者会十句妙答|4年两会看总理政务改革进行时
+          li
+            a(href="#") 人民网评：记者会，李克强总理使了三招“降龙十八掌” 
+    //- 菜单条
+    .trb-bar
+      a(href="#") 论坛新闻
+      a(href="#") 论坛图解
+      a(href="#") 论坛新媒体
+      a(href="#") “云聚”直播
+      a(href="#") 能源发展成果展
+      a(href="#") 生态三江源
+    //- 底部装饰图片
+    img.decorate(src="@|bg-2.jpg|")
+  .image-box.w1200
+    .title.clear
+      img.fr(src="@|title-1.png|")
+    plug(_name="module180" _src="https://template.owo.ink/1d008f1feefe7cf5.owo")
+  //- 卡片展示
+  .card-show.w1200.mt40
+    .title.clear
+      img.fl(src="@|title-2.png|")
+    .card-show-box.clear.mt40
+      .item(o-hover="grow")
+        a(href="#")
+          img(src="@|card-1.png|")
+          span 黄河
+      .item(o-hover="grow")
+        a(href="#")
+          img(src="@|card-2.png|")
+          span 三峡
+      .item(o-hover="grow")
+        a(href="#")
+          img(src="@|card-3.png|")
+          span 国网
+      .item(o-hover="grow")
+        a(href="#")
+          img(src="@|card-4.png|")
+          span 华能
+      .item(o-hover="grow")
+        a(href="#")
+          img(src="@|card-5.png|")
+          span 大唐
+  .w1200
+    .title.clear
+      img.fr.mt40(src="@|title-3.png|")
+    //- 视频盒子
+    .video-box.mt40
+    //- 视频盒子下方轮播
+    plug.mt40(_name="module4" _src="https://template.owo.ink/1cd5639a32eae500.owo")
+    .title.clear
+      img.fl.mt40(src="@|title-4.png|")
+    plug(_name="module181" _src="https://template.owo.ink/853a721d6ccdeb0d.owo")
+
+    .title.clear
+      img.fr.mt40(src="@|title-5.png|")
+    .swiper-big-image.mt40
+      img.big-img(src="")
+      .item.item-1(o-mouseover="activeBigImg(0)")
+        img(src="@|bg.jpg|")
+      .item.item-2(o-mouseover="activeBigImg(1)")
+        img(src="@|bg.jpg|")
+      .item.item-3(o-mouseover="activeBigImg(2)")
+        img(src="@|bg.jpg|")
+    //- 下方应用条
+    .swiper-bottom-bar
+      .so.so-1(o-hover="bob")
+        a(href="#")
+      .so.so-2(o-hover="bob")
+        a(href="#")
+      .so.so-3(o-hover="bob")
+        a(href="#")
+      .so.so-4(o-hover="bob")
+        a(href="#")
+      .so.so-5
+        img.qr-code(src="@|qr-code.png|")
+  .text-swiper-box
+    //- 底部轮播图
+    plug.w1200(_name="module155" _src="https://template.owo.ink/ba4fa1f4be63c302.owo")
+  //- 底部版权
+  plug(_name="module2" _src="https://template.owo.ink/060579f0b4f1bcaa.owo")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      console.log('ss')
+      // 自动生成大图
+      this.activeBigImg(0)
+    },
+    activeBigImg: function (ind) {
+      ind = parseInt(ind)
+      const itemList = this.queryAll('.swiper-big-image .item')
+      for (let index = 0; index < itemList.length; index++) {
+        const element = itemList[index];
+        element.classList.remove('active')
+      }
+      itemList[ind].classList.add('active')
+      this.query('.big-img').src = this.queryAll('.swiper-big-image .item img')[ind].src
+    }
+  }
+</script>
+
+
+<style lang="less">
+.main {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.main-box {
+  background-color: #163b91;
+  padding-top: 40px;
+}
+.decorate {
+  display: block;
+}
+.mt40 {
+  margin-top: 40px;
+}
+.lr-box {
+  .fr {
+    width: 470px;
+    color: white;
+    h2 {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 15px;
+    }
+    p {
+      line-height: 26px;
+      font-size: 13px;
+    }
+    .line {
+      background-image: url('@|line.png|');
+      height: 35px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    a {
+      display:  block;
+      color: white;
+    }
+    li {
+      background-image: url('@|doit.png|');
+      background-repeat: no-repeat;
+      background-position: 0 center;
+      padding-left: 15px;
+    }
+    li, li a {
+      line-height: 34px;
+      font-size: 16px;
+    }
+  }
+}
+.trb-bar {
+  text-align: center;
+  line-height: 60px;
+  margin-top: 60px;
+  font-size: 24px;
+  position: absolute;
+  width: 100%;
+  a {
+    color: white;
+    margin: 0 20px;
+    line-height: 40px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: inline-block;
+    line-height: 55px;
+  }
+  a:hover {
+    color: #f9dc78;
+    text-decoration: none;
+    background-image: url('@|aline.png|');
+  }
+}
+.image-box {
+  background-image: url('@|zhuangshi-1.png|');
+  background-repeat: no-repeat;
+  background-position: 0px 26px;
+}
+.card-show-box {
+  .item {
+    float: left;
+    margin: 0 11px;
+    img, span, a {
+      display: block;
+      color: #333333;
+      text-align: center;
+      font-size: 22px;
+      text-decoration: none;
+    }
+  }
+}
+.video-box {
+  width: 1200px;
+  height: 600px;
+}
+.swiper-big-image {
+  width: 1200px;
+  height: 610px;
+  position: relative;
+  .big-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .item {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 65px;
+    position: absolute;
+    border: 4px solid white;
+    left: 60px;
+    cursor: pointer;
+    img {
+      height: 100%;
+      width: auto;
+      position: absolute;
+      left: -50%;
+      right: -50%;
+      margin: auto;
+    }
+  }
+  .active {
+    border-color: #feca51;
+  }
+  .item-1 {
+    top: 100px;
+  }
+  .item-2 {
+    top: 250px;
+  }
+  .item-3 {
+    top: 400px;
+  }
+}
+.swiper-bottom-bar {
+  width: 957px;
+  height: 185px;
+  position: relative;
+  margin: 40px auto;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .so {
+    position: absolute;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  .so-1 {
+    left: 211px;
+    top: 29px;
+    width: 103px;
+    height: 132px;
+    background-image: url('@|408.png|');;
+  }
+  .so-2 {
+    left: 643px;
+    top: 29px;
+    width: 103px;
+    height: 134px;
+    background-image: url('@|405.png|');;
+  }
+  .so-3 {
+    left: 0px;
+    top: 29px;
+    width: 103px;
+    height: 134px;
+    background-image: url('@|409.png|');;
+  }
+  .so-4 {
+    left: 854px;
+    top: 29px;
+    width: 103px;
+    height: 134px;
+    background-image: url('@|406.png|');;
+  }
+  .so-5 {
+    left: 152px;
+    top: 0px;
+    width: 655px;
+    height: 185px;
+    user-select: none;
+    pointer-events: none;
+    background-image: url('@|414.png|');;
+  }
+}
+.decorate {
+  width: 100%;
+  margin-top: 30px;
+}
+.text-swiper-box {
+  background-color: #f2f2f2;
+  padding: 40px 0;
+  margin-top: 60px;
+}
+.qr-code {
+  position: absolute;
+  left: -16px;
+  right: 0;
+  top: -22px;
+  bottom: 0;
+  margin: auto;
+}
+</style>

@@ -1,0 +1,224 @@
+<template>
+  <div class="high3">
+    <div class="button arrow-left" o-tap="prev" o-hover="grow"></div> 
+    <div class="button arrow-right" o-tap="next" o-hover="grow"></div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- 插入图片 宽度: 860px 高度: 680px -->
+        <div class="swiper-slide">
+          <div class="top-box">
+            <h1>深谋脱贫感关怀</h1>
+            <h2>——河北省张家口市张北县小二台镇德胜村困难群众（徐万、徐学海、徐海成）</h2>
+          </div>
+          <p class="text">1月24日，中华民族的传统节日——农历鸡年春节来临之际，中共中央总书记、国家主席、中央军委主席习近平来到河北省张家口市，看望慰问基层干部群众，考察脱贫攻坚工作和北京冬奥会筹办工作，向全国各族人民致以美好的新春祝福，祝伟大祖国更加繁荣昌盛，祝各族人民更加幸福安康。习近平先后走进困难群众徐万、徐学海、徐海成家看望。他察看住房、生活设施、年货准备情况，同每家人算收入支出账，对照扶贫手册询问扶贫措施落实得怎么样，家里还有哪些实际困难。</p>
+          <div class="image-box-2 clear">
+            <div class="item">
+              <img src="@|show.png|">
+              <p>河北省张家口市张北县小二台镇德胜村困难群众</p>
+            </div>
+            <div class="item">
+              <img src="@|show.png|">
+              <p>河北省张家口市张北县小二台镇德胜村困难群众</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="top-box">
+            <h1>深谋脱贫感关怀</h1>
+            <h2>——河北省张家口市张北县小二台镇德胜村困难群众（徐万、徐学海、徐海成）</h2>
+          </div>
+          <p class="text">1月24日，中华民族的传统节日——农历鸡年春节来临之际，中共中央总书记、国家主席、中央军委主席习近平来到河北省张家口市，看望慰问基层干部群众，考察脱贫攻坚工作和北京冬奥会筹办工作，向全国各族人民致以美好的新春祝福，祝伟大祖国更加繁荣昌盛，祝各族人民更加幸福安康。习近平先后走进困难群众徐万、徐学海、徐海成家看望。他察看住房、生活设施、年货准备情况，同每家人算收入支出账，对照扶贫手册询问扶贫措施落实得怎么样，家里还有哪些实际困难。</p>
+          <div class="image-box-2 clear">
+            <div class="item">
+              <img src="@|show.png|">
+              <p>河北省张家口市张北县小二台镇德胜村困难群众</p>
+            </div>
+            <div class="item">
+              <img src="@|show.png|">
+              <p>河北省张家口市张北县小二台镇德胜村困难群众</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="top-box">
+            <h1>深谋脱贫感关怀</h1>
+            <h2>——河北省张家口市张北县小二台镇德胜村困难群众（徐万、徐学海、徐海成）</h2>
+          </div>
+          <p class="text">1月24日，中华民族的传统节日——农历鸡年春节来临之际，中共中央总书记、国家主席、中央军委主席习近平来到河北省张家口市，看望慰问基层干部群众，考察脱贫攻坚工作和北京冬奥会筹办工作，向全国各族人民致以美好的新春祝福，祝伟大祖国更加繁荣昌盛，祝各族人民更加幸福安康。习近平先后走进困难群众徐万、徐学海、徐海成家看望。他察看住房、生活设施、年货准备情况，同每家人算收入支出账，对照扶贫手册询问扶贫措施落实得怎么样，家里还有哪些实际困难。</p>
+          <div class="image-box-2 clear">
+            <div class="item">
+              <img src="@|show.png|">
+              <p>河北省张家口市张北县小二台镇德胜村困难群众</p>
+            </div>
+            <div class="item">
+              <img src="@|show.png|">
+              <p>河北省张家口市张北县小二台镇德胜村困难群众</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+module.exports = {
+  data: {
+    swiper: null
+  },
+  created: function () {
+    setTimeout(() => {
+      const dom = this.$el.getElementsByClassName('swiper-container')[0]
+      this.data.swiper = new Swiper(dom, {
+        // autoplay: 3000,
+        loop: true,
+        grabCursor: true,
+        paginationClickable: true
+      })
+    }, 0)
+  },
+  prev: function () {
+    this.data.swiper.swipePrev()
+  },
+  next: function () {
+    this.data.swiper.swipeNext()
+  }
+}
+</script>
+
+
+<style lang="less">
+.high3 {
+  width: 1200px;
+  height: 680px;
+  position: relative;
+  margin: 0px auto;
+}
+.button {
+  cursor: pointer;
+}
+.arrow-left {
+  background: url('@|left-2.png|') no-repeat center;
+  position: absolute;
+  left: -80px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 62px;
+  height: 62px;
+  z-index: 99;
+  background-position: center;
+}
+
+.arrow-right {
+  background: url('@|right-2.png|') no-repeat left bottom;
+  position: absolute;
+  right: -70px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 62px;
+  height: 62px;
+  z-index: 99;
+  background-position: center;
+}
+
+.swiper-container {
+  height: 680px;
+  width: 1200px;
+}
+
+.pagination {
+  display: none;
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.swiper-slide span {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+  font-size: 16px;
+  left: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.top-box {
+  width: 658px;
+  height: 167px;
+  padding: 0 80px;
+  background-image: url('@|doit-2.png|');
+  h1 {
+    font-size: 40px;
+    line-height: 95px;
+    color: #163a91;
+  }
+  h2 {
+    color: #333333;
+    font-size: 23px;
+    line-height: 34px;
+  }
+}
+.text {
+  text-indent: 2em;
+  font-size: 20px;
+  color: black;
+  line-height: 1.7;
+  width: 1100px;
+  margin: 0 50px;
+  margin-top: 30px;
+}
+.image-box-2 {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-evenly;
+  .item {
+    width: 397px;
+    float:  left;
+    margin: 0 20px;
+    p {
+      text-align: center;
+      line-height: 30px;
+      font-size: 18px;
+      color: #333333;
+    }
+  }
+}
+</style>
+
+<style lang="less" original>
+.phone .high3 {
+  width: 98%;
+  height: 55vw;
+  padding: 1vw;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    span {
+      font-size: 12px;
+      line-height: 30px;
+      height: 30px;
+    }
+  }
+  .arrow-left {
+    left: 10px;
+    background-size: 50px;
+  }
+  .arrow-right {
+    right: 10px;
+    background-size: 50px;
+  }
+}
+</style>

@@ -1,0 +1,86 @@
+<template lang="pug">
+.box-2.lr-box-2.clear.w1200
+  .left.fl
+    .img-box
+      a(href="" target="_blank")
+        img(src="https://cunchu.site/upload/fbe16e0c6ce3e3fb.png" width="890" height="550")
+        .play-button
+        p 底部信息底部信息底部信息
+  .right.fr.clear
+    .img-box.fl
+      a(href="" target="_blank")
+        img(src="https://cunchu.site/upload/fbe16e0c6ce3e3fb.png" width="285" height="170")
+        .play-button
+        p 底部信息底部信息底部信息
+    .img-box.fl
+      a(href="" target="_blank")
+        img(src="https://cunchu.site/upload/fbe16e0c6ce3e3fb.png" width="285" height="170")
+        .play-button
+        p 底部信息底部信息底部信息
+    .img-box.fl
+      a(href="" target="_blank")
+        img(src="https://cunchu.site/upload/fbe16e0c6ce3e3fb.png" width="285" height="170")
+        .play-button
+        p 底部信息底部信息底部信息
+</template>
+
+
+<style lang="less">
+.right {
+  width: 285px;
+}
+.img-box {
+  position: relative;
+}
+p {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 98%;
+  color: white;
+  line-height: 40px;
+  padding: 0 1%;
+  display: block;
+  font-size: 16px;
+}
+.left {
+  margin-top: 10px;
+  .img-box img {
+    width: 890px;
+    height: 550px;
+  }
+  .play-button {
+    width: 60px;
+    height: 60px;
+    background-size: 100%;
+    position: absolute;
+    left: 2%;
+    bottom: 11%;
+    z-index: 9;
+    background-image: url('@|play-button.png|');
+  }
+}
+a {
+  display: block;
+}
+.right {
+  float: right;
+  .img-box {
+    margin: 10px 5px;
+  }
+  .play-button {
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    position: absolute;
+    left: 4%;
+    bottom: 28%;
+    z-index: 9;
+    background-image: url('@|play-button.png|');
+  }
+}
+.img-box img, .img-box a {
+  display: block;
+  color: #000000;
+}
+</style>
